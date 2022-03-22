@@ -2,6 +2,18 @@
 
 # Git Tutorial
 
+Git is a version control language that makes it easy to track changes made by multiple people to various files. It does this by compartmentalizing changes into four data stores. The changes you make to files on your local machine are stored in the working tree. The staging area is where you add the changes from your working tree that aren't ready to be committed to your local repository, the next data store. The local repository is the copy of the final data store, the remote repository. The local repository is the finalized copy of the changes you make which can be pushed to the remote repository, which holds the centralized copy of the files and changes for everyone to access.
+
+To move changes from the working tree to the staging area to the local repository to the remote repository, use these commands respectively:
+
+```
+git add
+git commit
+git push
+```
+
+The most common host for Git repositories is GitHub which is what we'll be using today.
+
 **Cloning**
 The first step to working with git is to clone a repo. Repo is short for repository and it is basically a code project. In order to clone a repo onto your local machine, open your terminal and navigate to where you want the cloned repo to be stored. In this example we'll clone the repo to our desktop. Copy the GitHub link and type this line into the terminal:
 ```
@@ -12,7 +24,7 @@ The terminal should respond with:
 Now that we have our repo cloned to our desktop, we can move on to stashing.
 
 **Branches**
-To organize the changes you make to your project, git uses branches which are different versions of the same code. Lets make a new branch called new-branch:
+To organize the changes you make to your project, git uses branches which are different versions of the same code. Versions of code can be thought of as nodes in a binary tree with each new version becoming a child node of the previous version. When a node has two children, they are referred to as branches since both new versions are branching off of the same parent version. Lets make a new branch called new-branch:
 ```
 git branch new-branch
 ```
